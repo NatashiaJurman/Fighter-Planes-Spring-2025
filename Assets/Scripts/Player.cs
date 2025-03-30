@@ -55,11 +55,9 @@ public class Player : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x * -1, transform.position.y, 0);
         }
-        //Player leaves the screen vertically
-        if (transform.position.y > verticalScreenLimit || transform.position.y <= -verticalScreenLimit)
-        {
-            transform.position = new Vector3(transform.position.x, transform.position.y * -1, 0);
-        }
+        //Player stops moving beyond the y values
+     
+            transform.position = new Vector3(transform.position.x, Mathf.Clamp(transform.position.y, -3.5f, 0 ), 0);
     }
 
 }
