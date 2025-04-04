@@ -8,17 +8,19 @@ public class Enemy : MonoBehaviour
     public GameObject explosionPrefab;
 
     private GameManager gameManager;
+    private int score;
 
     // Start is called before the first frame update
     void Start()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        score = gameManager.score;
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        gameManager.ChangeScoreText(score);
     }
 
     private void OnTriggerEnter2D(Collider2D whatDidIHit)
