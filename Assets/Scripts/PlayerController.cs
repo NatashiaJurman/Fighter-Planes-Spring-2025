@@ -73,4 +73,14 @@ public class PlayerController : MonoBehaviour
         }
 
     }
+
+    private void OnTriggerEnter2D(Collider2D whatDidIHit)
+    {
+        if (whatDidIHit.tag == "Coin")
+        {
+            Destroy(whatDidIHit.gameObject);
+            gameManager.AddScore(1);
+            
+        }
+    }
 }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.3069224, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -305,6 +305,7 @@ MonoBehaviour:
   playerPrefab: {fileID: 7171125855411680431, guid: ab4ce61d798d52f4dbb01a4ce9cef431, type: 3}
   enemyOnePrefab: {fileID: 6995428336864113385, guid: 0fb8853a99d3b4846ab2cc8af5547d20, type: 3}
   cloudPrefab: {fileID: 4152853912323448415, guid: 011ef959c34a4c14e857d64617cee0b4, type: 3}
+  coinPrefab: {fileID: 8944431482000956325, guid: 984878b6c5c6af747b9a092ea082f235, type: 3}
   livesText: {fileID: 245161389}
   scoreText: {fileID: 1136697555}
   horizontalScreenSize: 0
