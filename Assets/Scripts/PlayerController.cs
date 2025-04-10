@@ -38,17 +38,36 @@ public class PlayerController : MonoBehaviour
 
     public void LoseALife()
     {
-        //Do I have a shield? If yes: do not lose a life, but instead deactivate the shield's visibility
-        //If not: lose a life
-        //lives = lives - 1;
-        //lives -= 1;
-        lives--;
-        gameManager.ChangeLivesText(lives);
-        if (lives == 0)
+        int shieldTest;
+        if (shieldPrefab.activeInHierarchy == true)
         {
-            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
-            gameManager.GameOver();
-            Destroy(this.gameObject);
+            shieldTest = 1;
+        }
+        else
+        {
+            shieldTest = 2;
+        }
+
+        switch (shieldTest)
+        {
+            case 1:
+                //Do I have a shield? If yes: do not lose a life, but instead deactivate the shield's visibility
+                shieldPrefab.SetActive(false);
+                break;  
+
+            case 2:
+                //If not: lose a life
+                //lives = lives - 1;
+                //lives -= 1;
+                lives--;
+                gameManager.ChangeLivesText(lives);
+                if (lives == 0)
+                {
+                    Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+                    gameManager.GameOver();
+                    Destroy(this.gameObject);
+                }
+                break;
         }
     }
 
@@ -75,7 +94,6 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(whatDidIHit.gameObject);
             gameManager.AddScore(1);
-
         }
 
         if (whatDidIHit.tag == "Powerup")
@@ -106,7 +124,12 @@ public class PlayerController : MonoBehaviour
                     //Picked up shield
                     //Do I already have a shield?
                     //If yes: do nothing
+                    if (shieldPrefab.activeInHierarchy == true)
+                    {
+                        break;
+                    }
                     //If not: activate the shield's visibility
+                    shieldPrefab.SetActive(true);
                     gameManager.ManagePowerupText(4);
                     break;
 
