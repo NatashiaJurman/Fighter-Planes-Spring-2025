@@ -3,7 +3,20 @@ guid: e6ce02732be4b7740bf374316eb973d1
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - playerPrefab: {instanceID: 0}
+  - enemyOnePrefab: {instanceID: 0}
+  - cloudPrefab: {instanceID: 0}
+  - coinPrefab: {instanceID: 0}
+  - gameOverText: {instanceID: 0}
+  - restartText: {instanceID: 0}
+  - powerupPrefab: {instanceID: 0}
+  - audioPlayer: {instanceID: 0}
+  - powerupSound: {fileID: 8300000, guid: 0c9235441148b2a45b75dbce361f8060, type: 3}
+  - powerdownSound: {fileID: 8300000, guid: f4c63ffe82b097047a41e3147507895b, type: 3}
+  - livesText: {instanceID: 0}
+  - scoreText: {instanceID: 0}
+  - powerupText: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -53,6 +53,7 @@ public class PlayerController : MonoBehaviour
             case 1:
                 //Do I have a shield? If yes: do not lose a life, but instead deactivate the shield's visibility
                 shieldPrefab.SetActive(false);
+                gameManager.PlaySound(2);
                 break;  
 
             case 2:
